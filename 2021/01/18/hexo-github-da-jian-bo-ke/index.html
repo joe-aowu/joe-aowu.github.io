@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="contact, 小博客">
+    <meta name="keywords" content="hexo+github搭建博客, 小博客">
     <meta name="description" content="小博客描述，激动的心，颤抖的手，终于摆脱各种乱七八糟算是简单搞好了，nice！">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>contact | 小博客</title>
+    <title>hexo+github搭建博客 | 小博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -314,76 +314,386 @@
 
 </header>
 
-    <div class="bg-cover pd-header about-cover">
-    <div class="container">
-    <div class="row">
-    <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
-        <div class="brand">
-            <div class="title center-align">
-                
-                山水有相逢
-                
-            </div>
+    
 
-            <div class="description center-align">
-                
-                <span id="subtitle"></span>
-                <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
-                <script>
-                    var typed = new Typed("#subtitle", {
-                        strings: ['你没有如期归来，而这正是离别的意义','念天地之悠悠，独怆然而涕下','Never really desperate, only the lost of the soul','爱，得之，我幸；不得，我命如此 而已'],
-                        startDelay: 300,
-                        typeSpeed: 100,
-                        loop: true,
-                        backSpeed: 50,
-                        showCursor: true
-                    });
-                </script>
-                
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/23.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">hexo+github搭建博客</h1>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
 
-<script>
-    // 每天切换 banner 图.  Switch banner image every day.
-    var bannerUrl = "/medias/banner/" + new Date().getDay() + '.jpg';
-    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
-</script>
 
 
+<main class="container content">
+
+    
+    <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/hexo/">
+                                <span class="chip bg-color">hexo</span>
+                            </a>
+                        
+                            <a href="/tags/%E5%8D%9A%E5%AE%A2/">
+                                <span class="chip bg-color">博客</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/hexo/" class="post-category">
+                                hexo
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2021-01-18
+                </div>
+                
+
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    478
+                </div>
+                
+
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="生成ssh密钥"><a href="#生成ssh密钥" class="headerlink" title="生成ssh密钥"></a>生成ssh密钥</h1><h3 id="git配置信息："><a href="#git配置信息：" class="headerlink" title="git配置信息："></a>git配置信息：</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> config --global user.name <span class="token string">"你的GitHub用户名"</span>
+<span class="token function">git</span> config --global user.email <span class="token string">"你的GitHub注册邮箱"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h3 id="git生成ssh密钥："><a href="#git生成ssh密钥：" class="headerlink" title="git生成ssh密钥："></a>git生成ssh密钥：</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">ssh-keygen -t rsa -C <span class="token string">"你的GitHub注册邮箱"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>输入三个回车，</p>
+<p>在文件夹中找到id_rsa.pub文件，用记事本打开，复制内容</p>
+<p>在github中进行ssh的设置，点击<a target="_blank" rel="noopener" href="https://github.com/settings/keys">设置</a></p>
+<p>输入title（随意），将刚才复制的内容粘贴到Key</p>
+<p>在git bash中输入ssh <a href="mailto:git@github.com">git@github.com</a>检测是否设置成功</p>
+<p>输入yes</p>
+<p>出现successfully即可</p>
+<h1 id="安装node-js"><a href="#安装node-js" class="headerlink" title="安装node.js"></a>安装node.js</h1><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/antma/article/details/86104068">参考博客</a></p>
+<p>安装过程可能出现的错误</p>
+<p><strong>错误1：ERR code ENOTFOUND</strong> </p>
+<p>解决方法：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> -g cnpm --registry<span class="token operator">=</span>https://registry.npm.taobao.org<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>之后继续刚刚的install</p>
+<p><strong>错误2：ERR code EAI_AGAIN</strong></p>
+<p>解决方法：换一个网（我从wifi换到手机热点即可）</p>
+<h1 id="github端操作"><a href="#github端操作" class="headerlink" title="github端操作"></a>github端操作</h1><p>在github新建一个repository，Repository name 输入&nbsp;用户名.github.io</p>
+<h1 id="hexo搭建"><a href="#hexo搭建" class="headerlink" title="hexo搭建"></a>hexo搭建</h1><p>进入文件夹，在命令行或者右键git bash输入</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> -g hexo-cli<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p><em>ps：该过程可能会很慢，还可能会报错</em></p>
+<p>若出现报错，尝试使用</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> cache clean -f<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>清理npm缓存，再次进行install，这次就不慢了</p>
+<p>之后进行初始化和安装</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo init   <span class="token comment">#初始化</span>
+<span class="token function">npm</span> <span class="token function">install</span> <span class="token comment">#安装</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>在git bash使用</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo g<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>生成页面</p>
+<p>使用</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo s<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>预览页面</p>
+<p>此时访问 <a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000</a> 出现页面即为成功</p>
+<p>在bash</p>
+<pre class="line-numbers language-none"><code class="language-none">ctrl+c<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>停止预览</p>
+<p>安装 hexo-deployer-git：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> hexo-deployer-git --save<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+
+<p>然后修改 _config.yml&nbsp;文件末尾的 Deployment 部分，修改成如下：</p>
+<pre><code>deploy:
+  type: git
+  repository: https://用户名.github.io/
+  branch: main</code></pre>
+<p><strong>github默认分支改为main了，大部分教程的branch还是master，注意一下就好</strong></p>
+<p>部署</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo d<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>輸入地址 https://用户名.github.io/ 即可访问到你的博客</p>
+<p>接下来就可以挑选一个喜欢的主题，根据相应教程对你的博客进行更改( &gt; ̀◡•́ )✧</p>
+<p>传送门奉上：<a target="_blank" rel="noopener" href="https://hexo.io/themes/">Themes | Hexo</a></p>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">qiao</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://joe-aowu.github.io/2021/01/18/hexo-github-da-jian-bo-ke/">http://joe-aowu.github.io/2021/01/18/hexo-github-da-jian-bo-ke/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">qiao</a>
+                    !
+                </span>
+            </div>
+        
     </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/hexo/">
+                                    <span class="chip bg-color">hexo</span>
+                                </a>
+                            
+                                <a href="/tags/%E5%8D%9A%E5%AE%A2/">
+                                    <span class="chip bg-color">博客</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
 </div>
 
-<main class="content">
-    <div id="contact" class="container chip-container">
-        <div class="card">
-            <div class="card-content">
-                <div class="tag-title center-align">
-                    <i class="fas fa-comments"></i>&nbsp;&nbsp;留言板
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2021/01/18/hexo-github-da-jian-bo-ke/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="hexo+github搭建博客">
+                        
+                        <span class="card-title">hexo+github搭建博客</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            使用hexo搭建一个博客，原以为会很难，上手后发现没有想象中的那么复杂
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-18
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/hexo/" class="post-category">
+                                    hexo
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/hexo/">
+                        <span class="chip bg-color">hexo</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%8D%9A%E5%AE%A2/">
+                        <span class="chip bg-color">博客</span>
+                    </a>
+                    
                 </div>
                 
             </div>
         </div>
-        <div class="card">
-            
-
-            
-
-            
-
-            
-
-            
-			
-			
-
-            
-
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/01/15/hello-world/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
+                        
+                        <span class="card-title">Hello World</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-15
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Qiao
+                            
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
         </div>
+        
     </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    
+
 </main>
+
+
 
 
     <footer class="page-footer bg-color">
