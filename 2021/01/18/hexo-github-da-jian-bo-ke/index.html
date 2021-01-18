@@ -383,7 +383,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    478
+                    513
                 </div>
                 
 
@@ -408,7 +408,8 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="生成ssh密钥"><a href="#生成ssh密钥" class="headerlink" title="生成ssh密钥"></a>生成ssh密钥</h1><h3 id="git配置信息："><a href="#git配置信息：" class="headerlink" title="git配置信息："></a>git配置信息：</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> config --global user.name <span class="token string">"你的GitHub用户名"</span>
+                <h1 id="生成ssh密钥"><a href="#生成ssh密钥" class="headerlink" title="生成ssh密钥"></a>生成ssh密钥</h1><p><em>配置这个主要是为了每次提交的时候不用手动输入用户名和密码</em></p>
+<h3 id="git配置信息："><a href="#git配置信息：" class="headerlink" title="git配置信息："></a>git配置信息：</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> config --global user.name <span class="token string">"你的GitHub用户名"</span>
 <span class="token function">git</span> config --global user.email <span class="token string">"你的GitHub注册邮箱"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <h3 id="git生成ssh密钥："><a href="#git生成ssh密钥：" class="headerlink" title="git生成ssh密钥："></a>git生成ssh密钥：</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">ssh-keygen -t rsa -C <span class="token string">"你的GitHub注册邮箱"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>输入三个回车，</p>
@@ -438,10 +439,10 @@
 <span class="token function">npm</span> <span class="token function">install</span> <span class="token comment">#安装</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <p>在git bash使用</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo g<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>生成页面</p>
+<p>生成页面    </p>
 <p>使用</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo s<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>预览页面</p>
+<p>预览页面    </p>
 <p>此时访问 <a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000</a> 出现页面即为成功</p>
 <p>在bash</p>
 <pre><code>ctrl+c</code></pre>
@@ -449,11 +450,10 @@
 <p>安装 hexo-deployer-git：</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> hexo-deployer-git --save<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-
 <p>然后修改 _config.yml&nbsp;文件末尾的 Deployment 部分，修改成如下：</p>
 <pre><code>deploy:
   type: git
-  repository: https://用户名.github.io/
+  repository: git@github.com:用户名/用户名.github.io.git
   branch: main</code></pre>
 <p><strong>github默认分支改为main了，大部分教程的branch还是master，注意一下就好</strong></p>
 <p>部署</p>
@@ -711,7 +711,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">551</span>&nbsp;字
+                class="white-color">586</span>&nbsp;字
             
             
             
