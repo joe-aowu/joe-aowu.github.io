@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="movies, 小博客">
-    <meta name="description" content="小博客描述，激动的心，颤抖的手，终于摆脱各种乱七八糟算是简单搞好了，nice！">
+    <meta name="description" content="行到水穷处，坐看云起时">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -181,14 +181,9 @@
      </div>
  </div><body>
 
-    
-    <!--动态线条背景-->
-    <script type="text/javascript"
-    color="122 103 238" opacity='0.7' zIndex="-2" count="50" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
-    </script>
-    
-
     <header class="navbar-fixed">
+    <!-- 进度条 -->
+    <div class="progress-bar"></div>
     <nav id="headNav" class="bg-color nav-transparent">
         <div id="navContainer" class="nav-wrapper container">
             <div class="brand-logo">
@@ -334,12 +329,12 @@
         <img src="/medias/logo.png" class="logo-img circle responsive-img">
         -->
 
-        <img src="/medias/avatar.jpg" class="logo-img circle responsive-img">
+        <img src="https://cdn.jsdelivr.net/gh/joe-aowu/BlogImages/images/avatar.jpg" class="logo-img circle responsive-img">
 
         <div class="logo-name">小博客</div>
         <div class="logo-desc">
             
-            小博客描述，激动的心，颤抖的手，终于摆脱各种乱七八糟算是简单搞好了，nice！
+            行到水穷处，坐看云起时
             
         </div>
     </div>
@@ -669,7 +664,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://joe-aowu.github.io/movies/index.html">http://joe-aowu.github.io/movies/index.html</a>
+                    <a href="https://joe-aowu.github.io/movies/index.html">https://joe-aowu.github.io/movies/index.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -1063,8 +1058,6 @@
     </div>
 </footer>
 
-<div class="progress-bar"></div>
-
 
     <!-- 搜索遮罩框 -->
 <div id="searchModal" class="modal">
@@ -1214,9 +1207,18 @@ $(function () {
 
 	
     
-
+    <!-- 动态线条 -->
+    
+    <script type="text/javascript" color="0,0,255"
+        pointColor="0,0,255" opacity='0.7'
+        zIndex="-1" count="99"
+        src="/libs/background/canvas-nest.js"></script>
     
 
+    <!-- 背景静止彩带 -->
+    
+
+    <!-- 背景动态彩带 -->
     
 
     

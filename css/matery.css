@@ -33,8 +33,9 @@
     }
 }
 
+/* 背景色的设置 */
 body {
-    background: linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35) );
+    background: linear-gradient(100deg, rgba(255, 237, 205, 0.35) 25%, rgba(0, 228, 255, 0.35) );
     margin: 0;
     color: #34495e;
     overflow-x: hidden;
@@ -1140,12 +1141,14 @@ mark {
     color: #fff;
 }
 
+/* 进度条 */
 .progress-bar {
     height: 4px;
     position: fixed;
-    bottom: 0;
+    top: 0;
     z-index: 300;
-    background: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%);
+    /* background: linear-gradient(to right, #48ff00 0%, #00fff2 100%); */
+    background: #48ff00;
     opacity: 0.8;
 }
 
@@ -1294,6 +1297,26 @@ header .side-nav .social-link {
     -moz-animation: scroll-down 1.5s infinite;
     -o-animation: scroll-down 1.5s infinite;
     animation: scroll-down 1.5s infinite;
+}
+
+/* 文章卡片hover动画 */
+@-webkit-keyframes myPulse{
+    from{-webkit-transform:scaleX(1);transform:scaleX(1)}
+    to{-webkit-transform:scale3d(1.05,1.05,1.05);
+        transform:scale3d(1.05,1.05,1.05);
+    }
+}
+@keyframes myPulse{
+    from{-webkit-transform:scaleX(1);transform:scaleX(1)}
+    to{-webkit-transform:scale3d(1.05,1.05,1.05);transform:scale3d(1.05,1.05,1.05)}
+}
+.myAnimation{
+    -webkit-animation-name: myPulse;
+    animation-name: myPulse;
+    -webkit-animation-duration:1s;
+    animation-duration:1s;
+    -webkit-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
 }
 
 @-moz-keyframes scroll-down {
@@ -1765,6 +1788,28 @@ article a:hover {
     font-weight: bold;
     color: #42b983;
     text-decoration: underline;
+}
+
+/* 鼠标离开文章卡片后归位动画 */
+@-webkit-keyframes myPulseBack{
+    from{-webkit-transform:scale3d(1.05,1.05,1.05);
+        transform:scale3d(1.05,1.05,1.05);
+    }
+    to{-webkit-transform:scaleX(1);transform:scaleX(1)}
+}
+@keyframes myPulseBack{
+    from{-webkit-transform:scale3d(1.05,1.05,1.05);
+        transform:scale3d(1.05,1.05,1.05);
+    }
+    to{-webkit-transform:scaleX(1);transform:scaleX(1)}
+}
+.article{
+    -webkit-animation-name: myPulseBack;
+    animation-name: myPulseBack;
+    -webkit-animation-duration:0.4s;
+    animation-duration:0.4s;
+    -webkit-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
 }
 
 .articles .row {

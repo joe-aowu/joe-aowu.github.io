@@ -3,11 +3,13 @@ $(function () {
      * 添加文章卡片hover效果.
      */
     let articleCardHover = function () {
-        let animateClass = 'animated pulse';
+        let animateClass = 'myAnimation';
         $('article .article').hover(function () {
             $(this).addClass(animateClass);
+            $(this).removeClass("article");
         }, function () {
             $(this).removeClass(animateClass);
+            $(this).addClass("article");
         });
     };
     articleCardHover();
